@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="bmiStyle.css" />
+  <link rel="stylesheet" href="styles.css">
+  <title>Health Care System</title>
+</head>
+
+<body>
+  <!-- Navigation bar-->
+  <nav class="navbar">
+    <a href="" class="navbar__logo">ALPHA</a>
+    <div class="navbar__toggle" id="mobile-menu">
+      <span class="bar"></span>
+      <span class="bar"></span> 
+      <span class="bar"></span>
+    </div>
+    <div class="navbar__menu">
+      <a href="index.html" class="navbar__link">Home</a>
+      <a href="services.html" class="navbar__link">Services</a>
+      <a href="plans.html" class="navbar__link">Plans</a>
+      <a href="trainers.html" class="navbar__link">Trainers</a>
+      <a href="bmiHome.html" class="navbar__link">BMI Calculator</a>
+    </div>
+  </nav>
+  <header>
+    <h1>Fitness Tracker</h1>
+  </header>
+
+  <div class="input-info">
+    <div class="zerothBox">
+      <label for="NameInput">Name &nbsp;: </label>
+      <input type="text"/>
+    </div>
+
+    <div class="firstBox">
+      <div class="age">
+        <label for="Input_Box">Age &nbsp;: </label>
+        <input type="number" name="numberInput" id="Input_Box" min="0" max="100" />
+      </div>
+
+      <div class="Radios">
+        <label for="MaleRadio">Male</label>
+        <input type="radio" id="MaleRadio" name="gender" value="male" />
+
+        <label for="FemaleRadio">&nbsp; Female</label>
+        <input type="radio" name="gender" value="female" id="FemaleRadio" />
+      </div>
+    </div>
+
+    <div class="secondBox">
+      <div class="height">
+        <label for="HeightInput">Height (cm) &nbsp;: </label>
+        <input type="number" id="HeightInput" />
+      </div>
+
+      <div class="weight">
+        <label for="WeightInput">Weight (kg) &nbsp;: </label>
+        <input type="number" id="WeightInput" />
+      </div>
+    </div>
+  </div>
+
+  <div class="MiddleBorder">
+    <button id="Calculate-BTN" onclick="Calculate()">Calculate</button>
+    <!-- <button type="reset">Reset</button> -->
+  </div>
+
+  <div class="MainPage">
+    <div class="row1">
+      <h2>BMI: <span id="BMI"></span></h2>
+      <h2>Body Fat:<span id="BodyFat"></span></h2>
+      <h2>Lean Body Mass: <span id="LBM"></span></h2>
+    </div>
+
+    <div class="row2">
+      <h2>Body Water: <span id="BodyWater"></span></h2>
+      <h2>BMR: <span id="BMR"></span></h2>
+      <h2>MuscleRate: X-Ray Required <span id="MuscleRate"></span></h2>
+    </div>
+
+    <div class="row3">
+      <h2>MuscleMass: <span id="MuscleMass"></span></h2>
+      <h2>BoneMass: <span id="BoneMass"></span></h2>
+    </div>
+  </div>
+
+  <div class="FinalBorder"></div>
+
+  <div class="dots">
+    <div class="green">
+      <span class="dot"></span>
+      <p>&nbsp; Normal</p>
+    </div>
+
+    <div class="yellow">
+      <span class="dot"></span>
+      <p>&nbsp; Moderate</p>
+    </div>
+
+    <div class="red">
+      <span class="dot"></span>
+      <p>&nbsp; Bad</p>
+    </div>
+  </div>
+  <div class="viewDietPlane">
+    <button onclick="openHtmlpage()" id="diet-button"> View Diet</button>
+  </div>
+
+  <div class="lastBorder"></div>
+
+<!-- 
+  <footer>
+    <div></div>
+    <p>Copyright &copy; 2024 Health Care System</p>
+  </footer> -->
+      <!-- footer section-->
+      <div class="footer">
+        <div class="footer__wrapper">
+            <div class="footer__desc">
+                <h1>ALPHA Gym</h1>
+                <p>Luxury fitness gym located in downtown India</p>
+                <p id="phone">+91 0000000000</p>
+            </div>
+            <div class="footer__links">
+                <div class="footer__title">Contact Us</div>
+                <a href="services.html" class="footer__link">Contact</a>
+                <a href="services.html" class="footer__link">Support</a>
+                <a href="services.html" class="footer__link">Sponserships</a>
+            </div>
+        </div>
+        <div class="footer__wrapper">
+            <div class="footer__links">
+            <h2 class="footer__title">Memberships</h2>
+            <a class="footer__link" href="">Pricing</a>
+            <a class="footer__link" href="">Plans</a>
+            <a class="footer__link" href="">FAQ</a>
+        </div>
+        <div class="footer__links">
+            <h2 class="footer__title">Social Media</h2>
+            <a class="footer__link" href="">Instagram</a>
+            <a class="footer__link" href="">Facebook</a>
+            <a class="footer__link" target="_blank" href="https://www.youtube.com/">Youtube</a>
+            <a class="footer__link" href="">Twitter</a>
+        </div>
+    </div>
+
+  <script src="bmiIndex.js"></script>
+</body>
+
+</html>
